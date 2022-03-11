@@ -1,0 +1,93 @@
+/* Fonts */
+@font-face {
+    font-family:'Roboto';
+    src: url(styles/fonts/Roboto-Regular.ttf) format(truetype);
+  }
+@font-face {
+    font-family:'Roboto';
+    src: url(styles/fonts/Roboto-Bold.ttf) format(truetype);
+    font-weight: bold;
+  }
+@font-face {
+    font-family: 'Shrikhand';
+    src: url(fonts/Shrikhand-Regular.ttf) format(truetype);
+  }
+
+  /* Variables */
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+$cd-background: #e4e9df;
+
+/* Mixins */
+@mixin size-img{
+    height: 20em;
+    width: 100%;
+    object-fit: cover;
+}
+@mixin box-shadow-header {
+    box-shadow: 0px 10px 16px -2px rgba(0,0,0,0.2);
+}
+
+@mixin gradient{
+    background: linear-gradient(to left top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+}
+@mixin button {
+    padding: 20px 15px;
+    font-size: 17px;
+    color: white;
+    border: 0;
+    border-radius: 30px;
+}
+
+body {
+    font-family:'Roboto';
+    font-weight: normal;
+    margin: 5px 0px;
+}  
+main img {
+    @include size-img;
+}
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5em;
+    width: 100%;
+    position: relative;
+    @include box-shadow-header;
+}
+
+
+.location {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $cd-background;
+    &__city {
+       margin-left: 15px;
+       font-size: 20px;
+   }
+}
+
+.hero {
+    padding: 30px 0px;
+    background: #fafafa;
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__title, &__txt {
+        text-align: center;
+    }
+    &__title {
+        margin: 0%;
+        max-width: 250px;
+    }
+    &__btn {
+        @include gradient;
+        @include button;
+    }
+}

@@ -4,28 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css" media="screen and (max-width: 426px)">
+    <link rel="stylesheet" href="styles/style-index.css">
     <script src="https://kit.fontawesome.com/1ecef1bbfc.js" crossorigin="anonymous"></script>
     <title>Ohmyfood!</title>
 </head>
 <body>
     <div id="bloc-page">
         <header>
-            <a href="#">
-                <img src="images/ohmyfood@2x.svg" alt="logo ohmyfood" id="logo">
-            </a>
+                <a href="#">
+                    <img src="images/ohmyfood@2x.svg" alt="logo ohmyfood!">
+                </a>
         </header>
         <main>
-            <div class="recherche">
-                <i class="fa-solid fa-location-dot"></i>
-                <input type="search" placeholder="Paris, Belleville">
+            <div class="location">
+                <div class="location__icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="location__city">
+                    <p>Paris, Belleville</p>
+                </div>
             </div>
 
-            <section>
-                <h2>Réservez le menu qui vous convient</h2>
-                <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-                <div class="btncontainer">
-                    <button type="submit" class="btn">Explorer nos restaurants</button>
+            <section class="hero">
+                <div class="hero__container">
+                    <h2 class="hero__title">Réservez le menu qui vous convient</h2>
+                    <p class="hero__txt">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+                    <button type="submit" class="hero__btn">Explorer nos restaurants</button>
                 </div>
             </section>
 
@@ -54,7 +58,7 @@
                     <a href="./menugout.html" target="_blank">
                         <div>  
                             <span>Nouveau</span>
-                            <img src="images/palettegout.jpg" alt="Carte de la Palette du goût">
+                            <img class="imageaccueil" src="images/palettegout.jpg" alt="Carte de la Palette du goût">
                         </div>  
                         <div>
                             <h3>La palette du goût</h3>
@@ -69,7 +73,7 @@
                     <a href="./menunote.html" target="_blank">
                         <div>
                             <span>Nouveau</span>
-                            <img src="images/note.jpg" alt="Carte de la note enchantée">
+                            <img class="imageaccueil"src="images/note.jpg" alt="Carte de la note enchantée">
                         </div>
                         <div>
                             <h3>La note enchantée</h3>
@@ -80,7 +84,7 @@
                 </div>
                 <div class="resto">
                     <a href="./menufrancaise.html" target="_blank">
-                        <img src="images/francaise.jpg" alt="Carte A la Française">
+                        <img class="imageaccueil" src="images/francaise.jpg" alt="Carte A la Française">
                         <div>
                             <h3>A la Française</h3>
                             <p>Cité Rouge</p>
@@ -90,7 +94,7 @@
                 </div>
                 <div class="resto">
                     <a href="./menusens.html" target="_blank">
-                        <img src="images/delicesens.jpg" alt="Carte Délice des sens">
+                        <img class="imageaccueil" src="images/delicesens.jpg" alt="Carte Délice des sens">
                         <div>
                             <h3>Le délice des sens</h3>
                             <p>Folie-Méricourt</p>
