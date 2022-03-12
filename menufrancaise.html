@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style-index.css">
+    <link rel="stylesheet" href="css/style-index.css">
     <script src="https://kit.fontawesome.com/1ecef1bbfc.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https : //fonts.googleapis.com/css2?family= Roboto:wght@400;700 & family = Shrikhand & display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="css/style-index.css"> <!--'Roboto', sans serif-->
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="css/style-index-css"> <!--'Shrikhand', cursive-->
     <title>Menu "A la francaise"</title>
 </head>
 <body>
@@ -21,16 +22,17 @@
             </a>
         </header>
 
-        <main>
+        <main class="menu">
             <img src="images/francaise.jpg" alt="image du restaurant à la Française">
-                <div>
+                <div class="menu__header">
                     <h1>A la française </h1>
-                    <button class="btn--like">
-                        <i class="fa-regular fa-heart"></i>
-                    </button>
+                    <div class="restaurants__heart">
+                        <i class="far fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                    </div>
                 </div>
-                <section class="entrees">
-                    <h2>Entrées</h2>
+                <section class="menu__starter">
+                    <h2 class="menu__title1">Entrées</h2>
                     <div>
                         <div>
                             <h3>Tartare de poulpe acidulé</h3>
@@ -63,8 +65,8 @@
                     </div>
                 </section>
 
-                <section class="plats">
-                    <h2>Plats</h2>
+                <section class="menu__dishes">
+                    <h2 class="menu__title1">Plats</h2>
                     <div>
                         <div>
                             <h3>Coquilles Saint-Jacques</h3>
@@ -97,7 +99,8 @@
                     </div>
                 </section>
 
-                <section class="desserts">
+                <section class="menu__desserts">
+                    <h2 class="menu__title1">Desserts</h2>
                     <div>
                         <div>
                             <h3>Pétales de violettes glacés</h3>
