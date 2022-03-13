@@ -9,7 +9,9 @@ $cd-background-location: #e4e9df;
 $cd-icon-light: #7E7E7E;
 $cd-shadow: #000000;
 $color-footer: #444740;
-
+$color-hover: #F5EDFF;
+$padding-dimensions: 30px 0px 15px 20px;
+$radius: 30px 35px;
 /*Mixins*/
 @mixin flexColumnCenter {
   display: flex;
@@ -24,11 +26,11 @@ $color-footer: #444740;
 }
 @mixin btnprop {
   font-size: 15px;
-  padding: 15px 20px;
+  padding: nth($padding-dimensions, 3) nth($padding-dimensions, 4);
   color: #fff;
   box-shadow:0px 10px 13px -10px $cd-shadow, 5px 5px 15px 5px rgba($cd-shadow,0.35);
   border: 0px;
-  border-radius: 35px;
+  border-radius: nth($radius, 2);
   background: $color-primary;
   background: linear-gradient(349deg, $color-primary 30%, $color-secondary 70%);
 }
@@ -38,6 +40,9 @@ $color-footer: #444740;
   transition: 300ms;
   box-shadow:0px 10px 13px -10px $cd-shadow, 5px 5px 15px 5px rgba($cd-shadow, .70);
 
+}
+@mixin box-shadow ($color) {
+  box-shadow: 0px 3px 10px 0px rgba($color, .20);
 }
 @mixin imgdefault {
   width: 100%;
@@ -56,6 +61,7 @@ $color-footer: #444740;
 @mixin paddingsection {
   padding: 30px 0px;
 }
+
 body {
   font-family: 'Roboto', sans-serif;
   width: 100%;
@@ -100,14 +106,15 @@ header {
     @include txtalign;
     font-weight: 300;
   }
-
-  &__btn {
+}
+ .btn {
     @include btnprop;
+    @include flexColumnCenter;
     &:active {
       @include btnactive;
     }
     }
-  }
+
 
   h2 {
     @include marginleft;
@@ -123,13 +130,18 @@ header {
 
   &__part {
     @include flexRowCenter;
+    @include box-shadow($cd-shadow);
     justify-content: flex-start;
     position: relative;
     margin: 10px 20px;
     width: 90%;
+    height: 60px;
     background: $cd-background-section;
-    border-radius: 30px;
+    border-radius: nth($radius, 1);
   }
+    &__part:hover {
+    background:  $color-hover;
+    }
 
   &__number {
     background: $color-primary;
@@ -146,13 +158,12 @@ header {
     
   }
 }
-  
+main img {
+  @include imgdefault;
+}
   .restaurants {
      background: $cd-background-section;
      @include paddingsection;
-    img{
-      @include imgdefault;
-    }
     &__menu {
       margin: 20px;
       border-radius: 30px;
@@ -212,5 +223,45 @@ header {
   justify-content: flex-start;
   p {
     padding-left: 10px;
+  }
+}
+
+
+/* MAP MENU */
+
+.headermenu {
+  position: relative;
+   i {
+    position: absolute;
+    transform: translate(-200px, 7px);
+    font-size: 25px;
+   }
+}
+
+.menu {
+  @include flexColumnCenter;
+  background: $cd-background-section;
+  align-items: flex-start;
+  
+  &__img {
+    border-radius: 0%;
+  }
+   h1 {
+     font-family: 'Shrikhand', cursive;
+   }
+  &__part {
+    width: 100%;
+    h2 {
+      text-transform: uppercase;
+      font-weight: 300;
+      font-size: 20px;
+      &:after {
+        border-bottom: $color-tertiary 2px solid;
+      }
+    }
+  }
+  &__header {
+    @include flexRowCenter;
+    justify-content: space-around;
   }
 }
