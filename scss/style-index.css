@@ -81,8 +81,20 @@ header {
   font-weight: 300;
 }
 
+.btncontainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .btn {
-  font-size: 15px;
+  font-size: 17px;
   padding: 15px 20px;
   color: #fff;
   -webkit-box-shadow: 0px 10px 13px -10px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0.35);
@@ -186,6 +198,7 @@ h2 {
 .fonctionnement__icon {
   color: #7E7E7E;
   margin: 0px 20px;
+  /*si part:hover, alors color violet sur l'icone*/
 }
 
 main img {
@@ -207,6 +220,9 @@ main img {
   margin: 20px;
   border-radius: 30px;
   background: #fff;
+  -webkit-box-align: inherit;
+      -ms-flex-align: inherit;
+          align-items: inherit;
 }
 
 .restaurants__imgcontainer {
@@ -298,13 +314,17 @@ footer p {
 /* MAP MENU */
 .headermenu {
   position: relative;
+  -webkit-box-orient: inherit;
+  -webkit-box-direction: inherit;
+      -ms-flex-direction: inherit;
+          flex-direction: inherit;
 }
 
 .headermenu i {
   position: absolute;
-  -webkit-transform: translate(-200px, 7px);
-          transform: translate(-200px, 7px);
-  font-size: 25px;
+  font-size: 20px;
+  left: 5px;
+  top: 25%;
 }
 
 .menu {
@@ -321,10 +341,15 @@ footer p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.menu__container {
+  margin-top: -30px;
+  width: 100%;
   background: #fafafa;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  padding-bottom: 30px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
 }
 
 .menu__img {
@@ -333,20 +358,24 @@ footer p {
 
 .menu h1 {
   font-family: 'Shrikhand', cursive;
-}
-
-.menu__part {
-  width: 100%;
+  font-size: 30px;
 }
 
 .menu__part h2 {
   text-transform: uppercase;
   font-weight: 300;
   font-size: 20px;
+  position: relative;
 }
 
 .menu__part h2:after {
-  border-bottom: #98e2cf 2px solid;
+  content: '';
+  width: 50px;
+  height: 3px;
+  background: #98e2cf;
+  position: absolute;
+  left: 0px;
+  bottom: -5px;
 }
 
 .menu__header {
@@ -361,5 +390,52 @@ footer p {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+.menu__platscontainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px 20px;
+  width: 90%;
+  height: 60px;
+  background: #fff;
+  border-radius: 30px;
+  -webkit-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.2);
+  margin: 30px 10px;
+  height: 75px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.menu__platscontainer div {
+  margin: inherit;
+}
+
+.menu__platscontainer div p, .menu__platscontainer div h3 {
+  margin: auto;
+  font-size: 95%;
+}
+
+.menu__platscontainer .menu__blockcheck {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu__platscontainer .menu__blockcheck i {
+  display: none;
+}
+
+.menu__platscontainer .menu__blockcheck p {
+  font-weight: 700;
 }
 /*# sourceMappingURL=style-index.css.map */

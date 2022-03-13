@@ -25,6 +25,7 @@
 
         <main class="menu">
             <img src="images/palettegout.jpg" alt="image du restaurant la palette du goût" class="menu__img">
+            <div class="menu__container">
                 <div class="menu__header menu__part">
                     <h1>La palette du goût</h1>
                     <div class="restaurants__heart">
@@ -133,10 +134,12 @@
                             <h3>Macaron au chocolat d'exception</h3>
                             <p>Et glace à la vanille de Madagascar</p>
                         </div>
-                        <p>22€</p>
-                        <span>
-                            <i class="fa-solid fa-circle-check"></i>
-                        </span>
+                        <div class="menu__blockcheck">
+                            <p>22€</p>
+                            <span>
+                                <i class="fa-solid fa-circle-check"></i>
+                            </span>
+                        </div>
                     </div> 
                     <div class="menu__platscontainer">
                         <div class="menu__entitled">
@@ -151,20 +154,24 @@
                         </div>
                     </div>
                 </section>
-                <div class="btncontainer btn">
-                    Commander
+
+                <div class="btncontainer">
+                    <div class="btn">
+                        Commander
+                    </div>
                 </div>
+            </div>
         </main>
         <footer>
             <a href="#">
-                <h4>ohmyfood</h4>
+                <h3>ohmyfood</h3>
             </a>
             <nav>
-            <a href="#">
+            <a href="#" class="navpart">
                 <i class="fa-solid fa-utensils"></i>
                 <p>Proposer un restaurant</p>
             </a>
-            <a href="#">
+            <a href="#" class="navpart">
                 <i class="fa-solid fa-handshake-angle"></i>
                 <p>Devenir partenaire</p>
             </a>
