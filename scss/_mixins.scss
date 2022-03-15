@@ -1,0 +1,64 @@
+@mixin flexColumnCenter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  @mixin flexRowCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  @mixin btnprop {
+    font-size: $font-size + 2px;
+    padding: nth($padding-dimensions, 3) nth($padding-dimensions, 4);
+    color: #fff;
+    box-shadow:0px 10px 13px -10px $cd-shadow, 5px 5px 15px 5px rgba($cd-shadow,0.15);
+    border: 0px;
+    border-radius: nth($radius, 2);
+    background: linear-gradient(349deg, $color-primary 30%, $color-secondary 70%);
+  }
+  @mixin btnactive { 
+    animation: animbtn 0.3s ease-out forwards;
+    }
+  @mixin box-shadow ($color) {
+    box-shadow: 0px 3px 10px 0px rgba($color, .20);
+  }
+  @mixin imgdefault {
+    width: 100%;
+    object-fit: cover;
+    height: 250px;
+    border-radius: nth($radius, 1);
+    border-bottom-left-radius: $no-radius;
+    border-bottom-right-radius: $no-radius;
+  }
+  @mixin txtalign {
+    text-align: center
+  }
+  @mixin paddingsection {
+    padding: nth($padding-dimensions, 1) nth($padding-dimensions, 2);
+  }
+  @mixin bg-part ($color){
+    margin: $margin $margin + 10px;
+    width: 90%;
+    height: 60px;
+    background: $color;
+    border-radius: nth($radius, 3);
+  }
+  @mixin bordertopradius {
+    border-top-left-radius: nth($radius, 3);
+    border-top-right-radius: nth($radius , 3);
+  }
+
+  @mixin iconhover {
+    @if ($color-hover) {
+      color: $color-primary;
+    }
+  }
+
+  @mixin heartactive {
+    &:hover, &:active{
+    cursor: pointer;
+    animation:heart-appear 300ms cubic-bezier(.58,.12,.3,.93)  alternate forwards;
+    }
+  }

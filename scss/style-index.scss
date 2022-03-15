@@ -1,84 +1,12 @@
-
-/* Variables */
-
-$color-primary: #9356DC;
-$color-secondary: #FF79DA;
-$color-tertiary: #98e2cf;
-$color-white: #fff;
-$cd-background-section: #fafafa;
-$cd-background-location: #e4e9df;
-$cd-icon-light: #7E7E7E;
-$cd-shadow: #000000;
-$color-footer: #444740;
-$color-hover: #F5EDFF;
-$padding-dimensions: 30px 0px 15px 20px;
-$radius: 30px 35px;
-/*Mixins*/
-@mixin flexColumnCenter {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-@mixin flexRowCenter {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-@mixin btnprop {
-  font-size: 17px;
-  padding: nth($padding-dimensions, 3) nth($padding-dimensions, 4);
-  color: #fff;
-  box-shadow:0px 10px 13px -10px $cd-shadow, 5px 5px 15px 5px rgba($cd-shadow,0.35);
-  border: 0px;
-  border-radius: nth($radius, 2);
-  background: $color-primary;
-  background: linear-gradient(349deg, $color-primary 30%, $color-secondary 70%);
-}
-@mixin btnactive { 
-  opacity: 0.8;
-  transform: scale(1);
-  transition: 300ms;
-  box-shadow:0px 10px 13px -10px $cd-shadow, 5px 5px 15px 5px rgba($cd-shadow, .70);
-
-}
-@mixin box-shadow ($color) {
-  box-shadow: 0px 3px 10px 0px rgba($color, .20);
-}
-@mixin imgdefault {
-  width: 100%;
-  object-fit: cover;
-  height: 250px;
-  border-radius: 30px;
-  border-bottom-left-radius: 0%;
-  border-bottom-right-radius: 0%;
-}
-@mixin txtalign {
-  text-align: center
-}
-@mixin marginleft{
-  margin-left: 10px;
-}
-@mixin paddingsection {
-  padding: 30px 0px;
-}
-@mixin bg-part ($color){
-  margin: 10px 20px;
-  width: 90%;
-  height: 60px;
-  background: $color;
-  border-radius: nth($radius, 1);
-}
-@mixin bordertopradius {
-  border-top-left-radius: nth($radius, 1);
-  border-top-right-radius: nth($radius , 1);
-}
+@import "./mixins";
+@import "./variables";
+@import "./keyframes";
 
 body {
   font-family: 'Roboto', sans-serif;
   width: 100%;
-  margin: 0px;
-  margin-top: 10px;
+  margin: $margin - $margin;
+  margin-top: $margin;
 }
 a {
   text-decoration: inherit;
@@ -86,10 +14,19 @@ a {
 }
 header {
   @include flexColumnCenter;
-  margin-bottom: 10px;
+  margin-bottom: $margin;
 }
 
-
+/*#loader {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+ &__content {
+   height: 100px;
+   width: 100px;
+   background-color: black;
+ }
+}*/
 
 .location {
   @include flexRowCenter;
@@ -97,7 +34,7 @@ header {
   box-shadow: inset 0px 3px 10px 0px rgba($cd-shadow, .35);
   opacity: .80;
   &__city {
-    @include marginleft;
+    margin-left: $margin;
   }
 }
 
@@ -111,7 +48,7 @@ header {
   &__title {
     @include txtalign;
     max-width: 250px;
-    margin: 0px;
+    margin: $margin - $margin;
   }
 
   &__txt {
@@ -126,14 +63,15 @@ header {
  .btn {
     @include btnprop;
     @include flexColumnCenter;
-    &:active {
+    &:active , &:hover{
       @include btnactive;
+      cursor: pointer;
     }
   }
 
 
   h2 {
-    @include marginleft;
+    margin-left: $margin;
   }
 
 .fonctionnement {
@@ -152,9 +90,13 @@ header {
     @include bg-part ($cd-background-section);
     
   }
-    &__part:hover {
-    background:  $color-hover;
+    &__part:hover{
+    animation: hovercolor 300ms both;
+
+    .fonctionnement__icon {
+      @include iconhover;
     }
+  }
 
   &__number {
     background: $color-primary;
@@ -167,8 +109,8 @@ header {
   }
   &__icon {
     color: $cd-icon-light;
-    margin: 0px 20px;
-   /*si part:hover, alors color violet sur l'icone*/
+    margin: $margin - $margin $margin+10px;
+    
   }
 }
 main img {
@@ -178,11 +120,18 @@ main img {
      background: $cd-background-section;
      @include paddingsection;
     &__menu {
-      margin: 20px;
-      border-radius: 30px;
+      margin: $margin+10px;
+      border-radius: nth($radius, 1);
       background: #fff;
       align-items: inherit;
+      @include box-shadow($cd-shadow);
+      &:hover {
+      transform: scale(0.95);
+      transition: all 500ms;
+      animation: shadowintensifier 300ms forwards;
+      }
     }
+
     &__imgcontainer {
       position: relative;
       display: flex;
@@ -191,44 +140,59 @@ main img {
     &__new {
       position: absolute;
       background: $color-tertiary;
-      margin: 15px;
-      padding: 10px;
-      font-size: 14px;
+      margin: $margin + 5px;
+      padding: nth($padding-dimensions, 2) + 10px;
+      font-size: $font-size - 1px;
       font-weight: 700;
-      color: darken($color-tertiary, 50%)
+      color: darken($color-tertiary, 50%);
+      animation: newclignote 1s infinite alternate forwards;
     }
     
     &__txtcontainer {
       display: flex;
-      padding: 0px 15px;
+      padding: nth($padding-dimensions, 2) nth($padding-dimensions, 3);
       justify-content: space-between;
       align-items: center;
       p {
         font-weight: 300;
-        margin-top: 0%;
+        margin-top: $margin - $margin;
       }
       h3 {
-        margin-bottom: 0%;
+        margin-bottom: $margin - $margin;
       }
     }
     &__heart {
-      font-size: 25px;
+      display: flex;
+      font-size: $font-size + 10px;
+      position: relative;
     }
   }
-  .fas:before {
-    display: none;
+  
+  .far {
+    position: absolute;
+
+   &:hover {
+    font-size: $font-size - $font-size;
+    transition: all 300ms;
+    }
   }
+
+  .fas {
+    opacity: 0;
+    @include heartactive
+  }
+
   footer { 
     background: $color-footer;
     color: $cd-background-section;
-    padding: 20px;
+    padding: nth($padding-dimensions, 4);
    h3 {
     font-family: 'Shrikhand', cursive;
-    font-size: 25px;
-    margin: 0px;
+    font-size: $font-size + 10px;
+    margin: $margin - $margin;
     }
     p {
-      margin: 5px;
+      margin: $margin -5px;
     }
   
 }
@@ -236,7 +200,7 @@ main img {
   @include flexRowCenter;
   justify-content: flex-start;
   p {
-    padding-left: 10px;
+    padding-left: nth($padding-dimensions, 3);
   }
 }
 
@@ -248,7 +212,7 @@ main img {
   flex-direction: inherit;
    i {
     position: absolute;
-    font-size: 20px;
+    font-size: $font-size + 5px;
     left: 5px;
     top:25%;
    }
@@ -257,26 +221,28 @@ main img {
 .menu {
   @include flexColumnCenter;
   &__container {
-    margin-top: -30px;
+    margin-top: $margin - 40px;
     width: 100%;
     background: $cd-background-section;
     padding-bottom: nth($padding-dimensions, 1 );
     @include bordertopradius;
 
+
   }
   
   &__img {
-    border-radius: 0%;
+    border-radius: $no-radius;
   }
    h1 {
      font-family: 'Shrikhand', cursive;
-     font-size: 30px;
+     font-size: $font-size + $font-size;
    }
   &__part {
+    
     h2 {
       text-transform: uppercase;
       font-weight: 300;
-      font-size: 20px;
+      font-size: $font-size + 5;
       position: relative;
       &:after {
         content: '';
@@ -299,9 +265,13 @@ main img {
   @include flexRowCenter;
   @include bg-part ($color-white);
   @include box-shadow($cd-shadow);
-  margin: 30px 10px;
+  margin: $margin + 20px $margin;
   height: 75px;
   justify-content: space-between;
+  &:hover {
+    cursor: pointer;
+    animation: shadowintensifier 300ms forwards;
+  }
    div {
      margin: inherit;
     p, h3 {
@@ -312,10 +282,10 @@ main img {
   .menu__blockcheck {
     display: flex;
     i {
-      display: none;
+      color: $color-white;
     }
     p {
       font-weight: 700;
-    }
+    } 
   }
 }
