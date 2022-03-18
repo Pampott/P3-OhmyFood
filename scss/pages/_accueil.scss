@@ -1,0 +1,128 @@
+.location {
+    @include flexRowCenter;
+    height: 50px;
+    background: $cd-background-location;
+    box-shadow: inset 0px 3px 10px 0px rgba($cd-shadow, .35);
+    opacity: .80;
+
+    &__city {
+      margin-left: $margin;
+    }
+}
+
+.hero {
+    @include paddingsection;
+    background: $cd-background-section;
+    &__container {
+      @include flexColumnCenter;
+    }
+  
+    &__title {
+      @include txtalign;
+      max-width: 250px;
+      margin: $margin - $margin;
+    }
+  
+    &__txt {
+      @include txtalign;
+      font-weight: 300;
+    }
+}
+
+.fonctionnement {
+    align-items: flex-start;
+    @include paddingsection;
+
+    &__parts{
+      @include flexColumnCenter;
+      align-items: flex-start;
+    }
+  
+    &__part {
+      @include flexRowCenter;
+      @include box-shadow($cd-shadow);
+      justify-content: flex-start;
+      position: relative;
+      @include bg-part ($cd-background-section);
+      
+    }
+        &__part:hover{
+        animation: hovercolor 300ms both;
+
+        .fonctionnement__icon {
+        @include iconhover;
+
+            }
+        }
+  
+    &__number {
+      background: $color-primary;
+      padding: 4px 9px;
+      border-radius: 100%;
+      color: $cd-background-section;
+      position: absolute;
+      transform: translateX(-50%);
+     
+    }
+
+    &__icon {
+      color: $cd-icon-light;
+      margin: $margin - $margin $margin+10px;
+      
+    }
+}
+
+main img {
+    @include imgdefault;
+  }
+    .restaurants {
+       background: $cd-background-section;
+       @include paddingsection;
+        &__menu {
+        margin: $margin+10px;
+        border-radius: nth($radius, 1);
+        background: #fff;
+        align-items: inherit;
+        @include box-shadow($cd-shadow);
+            &:hover {
+            transform: scale(0.95);
+            transition: all 500ms;
+            animation: shadowintensifier 300ms forwards;
+            }
+        }
+  
+        &__imgcontainer {
+            position: relative;
+            display: flex;
+            flex-direction: row-reverse;
+        }
+        &__new {
+            position: absolute;
+            background: $color-tertiary;
+            margin: $margin + 5px;
+            padding: nth($padding-dimensions, 2) + 10px;
+            font-size: $font-size - 1px;
+            font-weight: 700;
+            color: darken($color-tertiary, 50%);
+            animation: newclignote 1s infinite alternate forwards;
+        }
+      
+        &__txtcontainer {
+            display: flex;
+            padding: nth($padding-dimensions, 3);
+            justify-content: space-between;
+            align-items: center;
+            p {
+            font-weight: 300;
+            margin-top: $margin - $margin;
+            }
+            h3 {
+            margin-bottom: $margin - $margin;
+            }
+        }
+        &__heart {
+            display: flex;
+            font-size: $font-size + 10px;
+            position: relative;
+        }
+        }

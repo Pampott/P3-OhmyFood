@@ -1,0 +1,86 @@
+.headermenu {
+    position: relative;
+    flex-direction: inherit;
+//Position de la flèche retour vers index.html//
+     i {
+      position: absolute;
+      font-size: $font-size + 5px;
+      left: 5px;
+      top:25%;
+    }
+}
+
+.menu {
+    @include flexColumnCenter;
+    &__header {
+        @include flexRowCenter;
+        justify-content: space-around;
+        margin-top: $margin;
+    }
+    &__container {
+      margin-top: $margin - 30px;
+      width: 100%;
+      background: $cd-background-section;
+      padding-bottom: nth($padding-dimensions, 1 );
+      @include bordertopradius;
+  
+    }
+    //retrait des bordures arrondies sur img//
+    &__img {
+      border-radius: $no-radius;
+
+    }
+    h1 {
+    font-family: 'Shrikhand', cursive;
+    font-size: $font-size + $font-size;
+
+    }
+    &__part h2 {
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: $font-size + 5;
+        position: relative;
+        //Semi-bordure sous h2//
+        &:after {
+            content: '';
+            width: 50px;
+            height: 3px;
+            background: $color-tertiary;
+            position: absolute;
+            left: 0px;
+            bottom: -5px;
+        }
+    }
+}
+.menu__platscontainer {
+    @include flexRowCenter;
+    @include bg-part ($color-white);
+    @include box-shadow($cd-shadow);
+    opacity: 0;
+    animation: platappear 1s cubic-bezier(.24,.68,.61,1.02) forwards;
+    margin: $margin + 20px $margin;
+    height: 75px;
+    justify-content: space-between;
+}
+div {
+    margin: inherit;
+    p, h3 {
+    margin: auto;
+    font-size: 95%;
+    }
+}
+.menu__blockcheck {
+    display: flex;
+    i {
+      opacity: 0;
+    }
+    p {
+      font-weight: 700;
+    } 
+  }
+//animation apparition progressive des plats//
+@for $i from 1 through 10 {
+    .platscontainer-#{$i} {
+      animation-delay: ($i * 200) + 100ms;
+    }
+} 

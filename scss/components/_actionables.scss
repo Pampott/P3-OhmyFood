@@ -1,0 +1,34 @@
+.btncontainer {
+    @include flexRowCenter;
+    margin: $margin;
+
+  }
+//Effet de box-shadow amplifié + opacity diminuée au survol//
+.btn {
+    @include btnprop;
+    @include flexColumnCenter;
+
+    &:active , &:hover {
+        @include btnactive;
+        cursor: pointer;
+
+    }
+    
+}
+//Animations coeurs//
+.far {
+    position: absolute;
+
+   &:hover {
+    font-size: $font-size - $font-size;
+    transition: all 300ms;
+
+    }
+
+  }
+
+.fas {
+    opacity: 0;
+    @include heartactive;
+
+}

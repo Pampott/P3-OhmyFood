@@ -1,0 +1,33 @@
+header {
+    @include flexColumnCenter;
+    margin-bottom: $margin;
+
+}
+
+footer { 
+    background: $color-footer;
+    color: $cd-background-section;
+    padding: nth($padding-dimensions, 4);
+
+    h3 {
+    font-family: 'Shrikhand', cursive;
+    font-size: $font-size + 10px;
+    margin: $margin - $margin;
+
+    }
+    p {
+        margin: $margin -5px;
+    }
+  
+}
+
+.navpart {
+    @include flexRowCenter;
+    justify-content: flex-start;
+
+    p {
+      padding-left: nth($padding-dimensions, 3);
+
+    }
+
+  }

@@ -1,0 +1,17 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    margin: $margin - $margin;
+    padding-top: nth($padding-dimensions, 3) - 5;
+    z-index: 1;
+
+}
+
+a {
+    text-decoration: inherit;
+    color: inherit;
+}
+
+h2 {
+    margin-left: $margin;
+}

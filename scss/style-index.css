@@ -264,7 +264,7 @@ body {
   font-family: 'Roboto', sans-serif;
   width: 100%;
   margin: 0px;
-  margin-top: 10px;
+  padding-top: 10px;
   z-index: 1;
 }
 
@@ -273,7 +273,32 @@ a {
   color: inherit;
 }
 
-header {
+h2 {
+  margin-left: 10px;
+}
+
+.btncontainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px;
+}
+
+.btn {
+  font-size: 17px;
+  padding: 15px 20px;
+  color: #fff;
+  -webkit-box-shadow: 0px 10px 13px -10px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 10px 13px -10px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0.15);
+  border: 0px;
+  border-radius: 35px;
+  background: linear-gradient(349deg, #9356DC 30%, #FF79DA 70%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -287,7 +312,32 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 10px;
+}
+
+.btn:active, .btn:hover {
+  -webkit-animation: animbtn 0.3s ease-out forwards;
+          animation: animbtn 0.3s ease-out forwards;
+  cursor: pointer;
+}
+
+.far {
+  position: absolute;
+}
+
+.far:hover {
+  font-size: 0px;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+
+.fas {
+  opacity: 0;
+}
+
+.fas:hover, .fas:active {
+  cursor: pointer;
+  -webkit-animation: heart-appear 300ms cubic-bezier(0.58, 0.12, 0.3, 0.93) alternate forwards;
+          animation: heart-appear 300ms cubic-bezier(0.58, 0.12, 0.3, 0.93) alternate forwards;
 }
 
 #loader {
@@ -295,7 +345,6 @@ header {
   width: 100%;
   position: fixed;
   z-index: 2;
-  margin: auto;
   background: #444740;
   opacity: 0.7;
   -webkit-animation: disappear 0s linear 3s forwards;
@@ -355,10 +404,6 @@ header {
           transform: translateY(100%);
 }
 
-#loader__content:after__center {
-  font-family: 'Shrikhand', cursive;
-}
-
 .location {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -410,53 +455,6 @@ header {
 .hero__txt {
   text-align: center;
   font-weight: 300;
-}
-
-.btncontainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 10px;
-}
-
-.btn {
-  font-size: 17px;
-  padding: 15px 20px;
-  color: #fff;
-  -webkit-box-shadow: 0px 10px 13px -10px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 10px 13px -10px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0.15);
-  border: 0px;
-  border-radius: 35px;
-  background: linear-gradient(349deg, #9356DC 30%, #FF79DA 70%);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.btn:active, .btn:hover {
-  -webkit-animation: animbtn 0.3s ease-out forwards;
-          animation: animbtn 0.3s ease-out forwards;
-  cursor: pointer;
-}
-
-h2 {
-  margin-left: 10px;
 }
 
 .fonctionnement {
@@ -620,24 +618,21 @@ main img {
   position: relative;
 }
 
-.far {
-  position: absolute;
-}
-
-.far:hover {
-  font-size: 0px;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-}
-
-.fas {
-  opacity: 0;
-}
-
-.fas:hover, .fas:active {
-  cursor: pointer;
-  -webkit-animation: heart-appear 300ms cubic-bezier(0.58, 0.12, 0.3, 0.93) alternate forwards;
-          animation: heart-appear 300ms cubic-bezier(0.58, 0.12, 0.3, 0.93) alternate forwards;
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
 }
 
 footer {
@@ -675,7 +670,6 @@ footer p {
   padding-left: 15px;
 }
 
-/* MAP MENU */
 .headermenu {
   position: relative;
   -webkit-box-orient: inherit;
@@ -705,6 +699,21 @@ footer p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.menu__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 10px;
 }
 
 .menu__container {
@@ -740,21 +749,6 @@ footer p {
   position: absolute;
   left: 0px;
   bottom: -5px;
-}
-
-.menu__header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  margin-top: 10px;
 }
 
 .menu__platscontainer {
@@ -845,5 +839,15 @@ div p, div h3 {
 .platscontainer-8 {
   -webkit-animation-delay: 1700ms;
           animation-delay: 1700ms;
+}
+
+.platscontainer-9 {
+  -webkit-animation-delay: 1900ms;
+          animation-delay: 1900ms;
+}
+
+.platscontainer-10 {
+  -webkit-animation-delay: 2100ms;
+          animation-delay: 2100ms;
 }
 /*# sourceMappingURL=style-index.css.map */
