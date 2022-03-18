@@ -62,3 +62,9 @@
     animation:heart-appear 300ms cubic-bezier(.58,.12,.3,.93)  alternate forwards;
     }
   }
+
+  @for $i from 1 through 2 {
+    .platscontainer-#{$i} {
+      animation-delay: ($i * 10) + 200ms;
+    }
+  }
