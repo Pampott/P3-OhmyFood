@@ -27,16 +27,6 @@
         box-shadow: 5px 5px 15px 5px rgba($cd-shadow, .60);
     }
 }
-@keyframes newclignote {
-    from {
-        background: $color-tertiary;
-        color: darken($color-tertiary, 50%);
-    }
-    to {
-        background: lighten($color-tertiary, 10%);
-        transition: 1s;
-    }
-}
 
 @keyframes heart-appear {
     0% {

@@ -79,6 +79,7 @@ main img {
        background: $cd-background-section;
        @include paddingsection;
         &__menu {
+        position: relative;
         margin: $margin+10px;
         border-radius: nth($radius, 1);
         background: #fff;
@@ -104,7 +105,6 @@ main img {
             font-size: $font-size - 1px;
             font-weight: 700;
             color: darken($color-tertiary, 50%);
-            animation: newclignote 1s infinite alternate forwards;
         }
       
         &__txtcontainer {
@@ -119,6 +119,11 @@ main img {
             h3 {
             margin-bottom: $margin - $margin;
             }
+        }
+        &__heartcontainer {
+          position: absolute;
+          bottom: 20px;
+          right: 25px;
         }
         &__heart {
             display: flex;

@@ -1,13 +1,3 @@
-.platscontainer-1 {
-  -webkit-animation-delay: 210ms;
-          animation-delay: 210ms;
-}
-
-.platscontainer-2 {
-  -webkit-animation-delay: 220ms;
-          animation-delay: 220ms;
-}
-
 @-webkit-keyframes animbtn {
   from {
     opacity: 1;
@@ -75,30 +65,6 @@
   100% {
     -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.6);
             box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.6);
-  }
-}
-
-@-webkit-keyframes newclignote {
-  from {
-    background: #98e2cf;
-    color: #1b604e;
-  }
-  to {
-    background: #c0ede2;
-    -webkit-transition: 1s;
-    transition: 1s;
-  }
-}
-
-@keyframes newclignote {
-  from {
-    background: #98e2cf;
-    color: #1b604e;
-  }
-  to {
-    background: #c0ede2;
-    -webkit-transition: 1s;
-    transition: 1s;
   }
 }
 
@@ -546,6 +512,7 @@ main img {
 }
 
 .restaurants__menu {
+  position: relative;
   margin: 20px;
   border-radius: 30px;
   background: #fff;
@@ -584,8 +551,6 @@ main img {
   font-size: 14px;
   font-weight: 700;
   color: #1b604e;
-  -webkit-animation: newclignote 1s infinite alternate forwards;
-          animation: newclignote 1s infinite alternate forwards;
 }
 
 .restaurants__txtcontainer {
@@ -608,6 +573,12 @@ main img {
 
 .restaurants__txtcontainer h3 {
   margin-bottom: 0px;
+}
+
+.restaurants__heartcontainer {
+  position: absolute;
+  bottom: 20px;
+  right: 25px;
 }
 
 .restaurants__heart {
@@ -778,12 +749,8 @@ footer p {
           justify-content: space-between;
 }
 
-div {
-  margin: inherit;
-}
-
-div p, div h3 {
-  margin: auto;
+div p, h3 {
+  margin: auto 8px;
   font-size: 95%;
 }
 
