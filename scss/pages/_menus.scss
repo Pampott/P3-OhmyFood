@@ -66,15 +66,8 @@ div p, h3 {
     margin: auto 8px;
     font-size: 95%;
     }
-.menu__blockcheck {
-    display: flex;
-    i {
-      opacity: 0;
-    }
-    p {
-      font-weight: 700;
-    } 
-  }
+
+
 //animation apparition progressive des plats//
 @for $i from 1 through 10 {
     .platscontainer-#{$i} {

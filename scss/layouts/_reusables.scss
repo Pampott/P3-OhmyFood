@@ -1,6 +1,6 @@
 header {
     @include flexColumnCenter;
-    margin-bottom: $margin;
+    padding: nth($padding-dimensions, 3) - 5 0;
 
 }
 
