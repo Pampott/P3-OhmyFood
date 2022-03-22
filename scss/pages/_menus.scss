@@ -61,7 +61,16 @@
     margin: $margin + 20px $margin;
     height: 75px;
     justify-content: space-between;
+    &:active, &:hover {
+        .menu__blockcheck {
+            @include bloccheckappear;
+        }
+        i {
+          animation: checkspin 400ms linear alternate forwards;
+        }
+    }
 }
+
 div p, h3 {
     margin: auto 8px;
     font-size: 95%;

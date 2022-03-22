@@ -25,11 +25,7 @@
   font-size: 1.5em;
   height: 100%;
   @include flexRowCenter;
-  @include bloccheckappear;
-  }
-  i:active, i:hover {
-    animation: checkspin 400ms linear alternate forwards;
-  }
+}
 .menu__txt {
     display: flex;
     justify-content: space-between;

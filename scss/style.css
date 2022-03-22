@@ -802,6 +802,18 @@ footer p {
           justify-content: space-between;
 }
 
+.menu__platscontainer:active .menu__blockcheck, .menu__platscontainer:hover .menu__blockcheck {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  -webkit-animation: bloccheck-appear 400ms linear forwards;
+          animation: bloccheck-appear 400ms linear forwards;
+}
+
+.menu__platscontainer:active i, .menu__platscontainer:hover i {
+  -webkit-animation: checkspin 400ms linear alternate forwards;
+          animation: checkspin 400ms linear alternate forwards;
+}
+
 div p, h3 {
   margin: auto 8px;
   font-size: 95%;
@@ -881,18 +893,6 @@ div p, h3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.menu__blockcheck:active, .menu__blockcheck:hover {
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  -webkit-animation: bloccheck-appear 400ms linear forwards;
-          animation: bloccheck-appear 400ms linear forwards;
-}
-
-i:active, i:hover {
-  -webkit-animation: checkspin 400ms linear alternate forwards;
-          animation: checkspin 400ms linear alternate forwards;
 }
 
 .menu__txt {
