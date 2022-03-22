@@ -91,3 +91,31 @@
         transform: scale(1);
     }
 }
+@keyframes entitled70 {
+    0% {
+        width: calc(100%);
+    }
+    100% {
+        width: calc(70%);
+    }
+}
+@keyframes bloccheck-appear {
+    0% {
+        width: 0;
+        opacity: 1;
+        background: $color-tertiary;
+    }
+    100% {
+        opacity: 1;
+        width: calc(30%);
+        background: $color-tertiary;
+    }
+}
+@keyframes checkspin {
+   0% {
+        transform: rotate(0%);
+   } 
+   100% {
+        transform: rotate(2turn);
+   }
+}

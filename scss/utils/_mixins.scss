@@ -59,6 +59,13 @@
   @mixin heartactive {
     &:hover, &:active{
     cursor: pointer;
-    animation:heart-appear 300ms cubic-bezier(.58,.12,.3,.93)  alternate forwards;
+    animation:heart-appear 500ms cubic-bezier(.58,.12,.3,.93)  alternate forwards;
     }
   }
+@mixin bloccheckappear {
+  &:active, &:hover {
+  border-top-right-radius: nth($radius, 3);
+  border-bottom-right-radius: nth($radius, 3);
+  animation: bloccheck-appear 400ms linear forwards;
+ }
+}

@@ -14,7 +14,22 @@
 //Animation coeur inactive à faire//
 .menu__entitled {
     width: calc(100%);
+    &:active, &:hover {
+    animation: entitled70 400ms linear alternate forwards;
+    }
 }
+.menu__blockcheck {
+  opacity: 0;
+  color: white;
+  width: 0;
+  font-size: 1.5em;
+  height: 100%;
+  @include flexRowCenter;
+  @include bloccheckappear;
+  }
+  i:active, i:hover {
+    animation: checkspin 400ms linear alternate forwards;
+  }
 .menu__txt {
     display: flex;
     justify-content: space-between;
@@ -28,8 +43,4 @@
       white-space: normal;
     }
   }
-  .menu__blockcheck {
-      opacity: 0;
-      width: 0;
-      
-  }
+

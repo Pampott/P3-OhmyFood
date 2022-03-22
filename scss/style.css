@@ -214,6 +214,72 @@
   }
 }
 
+@-webkit-keyframes entitled70 {
+  0% {
+    width: calc(100%);
+  }
+  100% {
+    width: calc(70%);
+  }
+}
+
+@keyframes entitled70 {
+  0% {
+    width: calc(100%);
+  }
+  100% {
+    width: calc(70%);
+  }
+}
+
+@-webkit-keyframes bloccheck-appear {
+  0% {
+    width: 0;
+    opacity: 1;
+    background: #98e2cf;
+  }
+  100% {
+    opacity: 1;
+    width: calc(30%);
+    background: #98e2cf;
+  }
+}
+
+@keyframes bloccheck-appear {
+  0% {
+    width: 0;
+    opacity: 1;
+    background: #98e2cf;
+  }
+  100% {
+    opacity: 1;
+    width: calc(30%);
+    background: #98e2cf;
+  }
+}
+
+@-webkit-keyframes checkspin {
+  0% {
+    -webkit-transform: rotate(0%);
+            transform: rotate(0%);
+  }
+  100% {
+    -webkit-transform: rotate(2turn);
+            transform: rotate(2turn);
+  }
+}
+
+@keyframes checkspin {
+  0% {
+    -webkit-transform: rotate(0%);
+            transform: rotate(0%);
+  }
+  100% {
+    -webkit-transform: rotate(2turn);
+            transform: rotate(2turn);
+  }
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   width: 100%;
@@ -289,8 +355,8 @@ h2 {
 
 .fas:hover, .fas:active {
   cursor: pointer;
-  -webkit-animation: heart-appear 300ms cubic-bezier(0.58, 0.12, 0.3, 0.93) alternate forwards;
-          animation: heart-appear 300ms cubic-bezier(0.58, 0.12, 0.3, 0.93) alternate forwards;
+  -webkit-animation: heart-appear 500ms cubic-bezier(0.58, 0.12, 0.3, 0.93) alternate forwards;
+          animation: heart-appear 500ms cubic-bezier(0.58, 0.12, 0.3, 0.93) alternate forwards;
 }
 
 #loader {
@@ -795,6 +861,40 @@ div p, h3 {
   width: calc(100%);
 }
 
+.menu__entitled:active, .menu__entitled:hover {
+  -webkit-animation: entitled70 400ms linear alternate forwards;
+          animation: entitled70 400ms linear alternate forwards;
+}
+
+.menu__blockcheck {
+  opacity: 0;
+  color: white;
+  width: 0;
+  font-size: 1.5em;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu__blockcheck:active, .menu__blockcheck:hover {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  -webkit-animation: bloccheck-appear 400ms linear forwards;
+          animation: bloccheck-appear 400ms linear forwards;
+}
+
+i:active, i:hover {
+  -webkit-animation: checkspin 400ms linear alternate forwards;
+          animation: checkspin 400ms linear alternate forwards;
+}
+
 .menu__txt {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -813,10 +913,5 @@ div p, h3 {
 .menu__txt--price {
   font-weight: bold;
   white-space: normal;
-}
-
-.menu__blockcheck {
-  opacity: 0;
-  width: 0;
 }
 /*# sourceMappingURL=style.css.map */
