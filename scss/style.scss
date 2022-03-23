@@ -9,38 +9,5 @@
 @import "./pages/menus"; 
 
 
-//Faire anim check qui spin//
 //Faire le responsive//
-//Animation coeur inactive à faire//
-.menu__entitled {
-    width: calc(100%);
-    &:active, &:hover {
-    animation: entitled70 400ms linear alternate forwards;
-    }
-}
-.menu__blockcheck {
-  opacity: 0;
-  color: white;
-  width: 0;
-  font-size: 1.5em;
-  height: 100%;
-  @include flexRowCenter;
-  @include bloccheckappear;
-  }
-  i:active, i:hover {
-    animation: checkspin 400ms linear alternate forwards;
-  }
-.menu__txt {
-    display: flex;
-    justify-content: space-between;
-    p {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    }
-    &--price {
-      font-weight: bold;
-      white-space: normal;
-    }
-  }
 

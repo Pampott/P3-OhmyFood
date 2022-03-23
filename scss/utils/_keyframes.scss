@@ -107,7 +107,7 @@
     }
     100% {
         opacity: 1;
-        width: calc(30%);
+        width: calc(25%);
         background: $color-tertiary;
     }
 }
@@ -116,6 +116,6 @@
         transform: rotate(0%);
    } 
    100% {
-        transform: rotate(2turn);
+        transform: rotate(1turn);
    }
 }

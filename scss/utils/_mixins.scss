@@ -63,9 +63,7 @@
     }
   }
 @mixin bloccheckappear {
-  &:active, &:hover {
   border-top-right-radius: nth($radius, 3);
   border-bottom-right-radius: nth($radius, 3);
-  animation: bloccheck-appear 400ms linear forwards;
- }
+  animation: bloccheck-appear 400ms linear alternate forwards;
 }

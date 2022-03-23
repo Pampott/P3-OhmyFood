@@ -240,7 +240,7 @@
   }
   100% {
     opacity: 1;
-    width: calc(30%);
+    width: calc(25%);
     background: #98e2cf;
   }
 }
@@ -253,7 +253,7 @@
   }
   100% {
     opacity: 1;
-    width: calc(30%);
+    width: calc(25%);
     background: #98e2cf;
   }
 }
@@ -264,8 +264,8 @@
             transform: rotate(0%);
   }
   100% {
-    -webkit-transform: rotate(2turn);
-            transform: rotate(2turn);
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
   }
 }
 
@@ -275,8 +275,8 @@
             transform: rotate(0%);
   }
   100% {
-    -webkit-transform: rotate(2turn);
-            transform: rotate(2turn);
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
   }
 }
 
@@ -802,6 +802,27 @@ footer p {
           justify-content: space-between;
 }
 
+.menu__platscontainer:hover .menu__blockcheck, .menu__platscontainer:active .menu__blockcheck {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  -webkit-animation: bloccheck-appear 400ms linear alternate forwards;
+          animation: bloccheck-appear 400ms linear alternate forwards;
+}
+
+.menu__platscontainer:hover i, .menu__platscontainer:active i {
+  -webkit-animation: checkspin 400ms linear alternate forwards;
+          animation: checkspin 400ms linear alternate forwards;
+}
+
 div p, h3 {
   margin: auto 8px;
   font-size: 95%;
@@ -861,6 +882,12 @@ div p, h3 {
   width: calc(100%);
 }
 
+.menu__entitled h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .menu__entitled:active, .menu__entitled:hover {
   -webkit-animation: entitled70 400ms linear alternate forwards;
           animation: entitled70 400ms linear alternate forwards;
@@ -869,30 +896,10 @@ div p, h3 {
 .menu__blockcheck {
   opacity: 0;
   color: white;
+  background: #98e2cf;
   width: 0;
   font-size: 1.5em;
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.menu__blockcheck:active, .menu__blockcheck:hover {
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  -webkit-animation: bloccheck-appear 400ms linear forwards;
-          animation: bloccheck-appear 400ms linear forwards;
-}
-
-i:active, i:hover {
-  -webkit-animation: checkspin 400ms linear alternate forwards;
-          animation: checkspin 400ms linear alternate forwards;
 }
 
 .menu__txt {
@@ -904,7 +911,7 @@ i:active, i:hover {
           justify-content: space-between;
 }
 
-.menu__txt p {
+.menu__txt p:first-child {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
