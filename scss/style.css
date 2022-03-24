@@ -525,6 +525,10 @@ h2 {
   border-radius: 20px;
 }
 
+.fonctionnement__part p {
+  font-weight: bold;
+}
+
 .fonctionnement__part:hover {
   -webkit-animation: hovercolor 300ms both;
           animation: hovercolor 300ms both;

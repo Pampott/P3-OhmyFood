@@ -44,7 +44,10 @@
       justify-content: flex-start;
       position: relative;
       @include bg-part ($cd-background-section);
-      
+
+       p {
+         font-weight: bold;
+       }
     }
         &__part:hover{
         animation: hovercolor 300ms both;
