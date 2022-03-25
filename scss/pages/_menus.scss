@@ -5,7 +5,7 @@
      i {
       position: absolute;
       font-size: $font-size + 5px;
-      left: 5px;
+      left: 10px;
       top:25%;
     }
 }
@@ -116,5 +116,37 @@ div p, h3 {
     &--price {
     font-weight: bold;
     white-space: normal;
+    }
+}
+@media screen and (min-width: $tablette) {
+    .menu {
+      background: lighten($color-tertiary, 20);
+    }
+    
+    .menu__container {
+      width: calc(90%);
+    }
+    
+    .menu__blocplats {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .menu__platscontainer {
+      width: 90%;
+    }
+    
+}
+
+@media screen and (min-width: $desktop) {
+    .menu__blocplats--container {
+      display: flex;
+      justify-content: space-around;
+    }
+    .menu__part {
+      width: 30%;
+    }
+    .menu__platscontainer {
+      width: 100%;
     }
 }

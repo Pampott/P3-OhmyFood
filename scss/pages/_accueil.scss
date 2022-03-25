@@ -133,4 +133,46 @@ main img {
             font-size: $font-size + 10px;
             position: relative;
         }
-        }
+}
+
+@media screen and (min-width: $tablette) {
+  /*Position des blocs fonctionnement en ligne, avec un contenu en colonne pour chaque bloc*/
+  .fonctionnement {
+    &__parts {
+      flex-direction: row;
+    }
+    &__part {
+      flex-direction: column;
+      justify-content: flex-end;
+      height: 120px;
+    }
+    p {
+      margin: 20px 0;
+    }
+    &__number {
+      transform: translateY(-390%);
+    }
+    &__icon {
+      font-size: 25px;
+    }
+  }
+  /*blocs menu 2 par 2*/
+  .restaurants__menucontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .restaurants__menu {
+    width: 40%;
+  }
+
+  footer h3 {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 $margin + 10;
+  }
+  nav {
+    display: flex;
+    justify-content: space-around;
+  }
+}
