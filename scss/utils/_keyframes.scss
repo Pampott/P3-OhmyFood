@@ -93,10 +93,10 @@
 }
 @keyframes entitled70 {
     0% {
-        width: calc(100%);
+        width: 100;
     }
     100% {
-        width: calc(70%);
+        width: 70%;
     }
 }
 @keyframes bloccheck-appear {
@@ -107,7 +107,7 @@
     }
     100% {
         opacity: 1;
-        width: calc(25%);
+        width: 30%;
         background: $color-tertiary;
     }
 }
