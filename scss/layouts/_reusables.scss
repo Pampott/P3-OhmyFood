@@ -8,12 +8,11 @@ header {
 footer { 
     background: $color-footer;
     color: $cd-background-section;
-    padding: nth($padding-dimensions, 4)-10px 0 nth($padding-dimensions, 4);
+    padding: nth($padding-dimensions, 4);
 
     h3 {
     font-family: 'Shrikhand', cursive;
     font-size: $font-size + 10px;
-    margin: 10px;
 
     }
     p {
