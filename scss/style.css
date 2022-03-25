@@ -656,7 +656,7 @@ main img {
   position: relative;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 600px) {
   /*Position des blocs fonctionnement en ligne, avec un contenu en colonne pour chaque bloc*/
   .fonctionnement__parts {
     -webkit-box-orient: horizontal;
@@ -1002,7 +1002,7 @@ div p, h3 {
   white-space: normal;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 600px) {
   .menu {
     background: #c0ede2;
   }
