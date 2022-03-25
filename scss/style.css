@@ -730,13 +730,13 @@ header {
 footer {
   background: #444740;
   color: #fafafa;
-  padding: 20px;
+  padding: 10px 0 20px;
 }
 
 footer h3 {
   font-family: 'Shrikhand', cursive;
   font-size: 25px;
-  margin: 0px;
+  margin: 10px;
 }
 
 footer p {
