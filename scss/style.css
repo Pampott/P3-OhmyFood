@@ -216,7 +216,7 @@
 
 @-webkit-keyframes entitled70 {
   0% {
-    width: 100;
+    width: 100%;
   }
   100% {
     width: 70%;
@@ -225,7 +225,7 @@
 
 @keyframes entitled70 {
   0% {
-    width: 100;
+    width: 100%;
   }
   100% {
     width: 70%;
@@ -240,7 +240,7 @@
   }
   100% {
     opacity: 1;
-    width: 30%;
+    width: 25%;
     background: #98e2cf;
   }
 }
@@ -253,7 +253,7 @@
   }
   100% {
     opacity: 1;
-    width: 30%;
+    width: 25%;
     background: #98e2cf;
   }
 }
@@ -578,6 +578,10 @@ main img {
           align-items: inherit;
   -webkit-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.2);
+  -webkit-transition: -webkit-transform 500ms ease-in-out;
+  transition: -webkit-transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
 }
 
 .restaurants__menu:hover {
@@ -887,6 +891,11 @@ footer p {
           animation: checkspin 400ms linear alternate forwards;
 }
 
+.menu__platscontainer:hover .menu__entitled, .menu__platscontainer:active .menu__entitled {
+  -webkit-animation: entitled70 400ms linear forwards;
+          animation: entitled70 400ms linear forwards;
+}
+
 div p, h3 {
   margin: auto 8px;
   font-size: 95%;
@@ -957,11 +966,6 @@ div p, h3 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-
-.menu__entitled:active, .menu__entitled:hover {
-  -webkit-animation: entitled70 400ms linear alternate forwards;
-          animation: entitled70 400ms linear alternate forwards;
 }
 
 .menu__blockcheck {

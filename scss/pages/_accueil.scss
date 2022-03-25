@@ -88,6 +88,7 @@ main img {
         background: #fff;
         align-items: inherit;
         @include box-shadow($cd-shadow);
+        transition: transform 500ms ease-in-out;
             &:hover {
             transform: scale(0.95);
             transition: all 500ms;
